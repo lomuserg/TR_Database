@@ -1,4 +1,4 @@
-package ru.podol.tr_database;
+package ru.podol.tr_database.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
