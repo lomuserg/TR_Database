@@ -14,7 +14,7 @@
             <input name="lastname" placeholder="Фамилия">
             <input name="email" placeholder="Email">
             <input name="password" placeholder="password">
-            <input name="submit" placeholder="SignUp">
+            <input type="submit" placeholder="SignUp">
         </form>
     </div>
 </body>
