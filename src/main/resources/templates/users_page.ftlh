@@ -11,20 +11,20 @@
 <div>
     <table>
         <tr>
-           <th>ID</th>
+            <th>ID</th>
             <th>FirstName</th>
             <th>LastName</th>
             <th>Email</th>
         </tr>
+        <#list users as user>
+            <tr>
+                <th>${user.id}</th>
+                <th>${user.firstname}</th>
+                <th>${user.lastname}</th>
+                <th>${user.email}</th>
+            </tr>
+        </#list>
     </table>
-    <#list users as user>
-        <tr>
-            <td>${user.id}</td>
-            <td>${user.firstname}</td>
-            <td>${user.lastname}</td>
-            <td>${user.email}</td>
-        </tr>
-    </#list>
 </div>
 </body>
 </html>
