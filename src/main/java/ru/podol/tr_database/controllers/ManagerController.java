@@ -7,22 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ru.podol.tr_database.models.*;
 import ru.podol.tr_database.repozitories.*;
 
-
 import java.util.List;
 
 @Controller
-public class UsersController {
-    @Autowired
-    private ProductRepozitory productsRepozitory;
+public class ManagerController {
     @Autowired
     private OrdersRepozitory ordersRepozitory;
-    @GetMapping("/users")
+    @GetMapping("/manager")
     public String getUsersPage(Model model){
-        List<Product> products = productsRepozitory.findAll();
-        model.addAttribute("products",products);
         List<Order> orders = ordersRepozitory.findAll();
         model.addAttribute("orders",orders);
-        return "users_page";
+        return "manager_page";
     }
 
 }
