@@ -43,6 +43,23 @@
         </#list>
     </table>
 
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Orderstate</th>
+            <th>Deliverydate</th>
+            <th>Price</th>
+        </tr>
+        <#list orders as order>
+            <tr>
+                <th>${order.idorder}</th>
+                <th>${order.orderstate}</th>
+                <th>${order.deliverydate}</th>
+                <th>${order.price}</th>
+            </tr>
+        </#list>
+    </table>
+
 </div>
 </body>
 </html>
