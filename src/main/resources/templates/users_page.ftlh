@@ -25,7 +25,6 @@
             </tr>
         </#list>
     </table>
-
     <table>
         <tr>
             <th>ID</th>
@@ -42,7 +41,6 @@
             </tr>
         </#list>
     </table>
-
     <table>
         <tr>
             <th>ID</th>
@@ -56,6 +54,22 @@
                 <th>${order.orderstate}</th>
                 <th>${order.deliverydate}</th>
                 <th>${order.price}</th>
+            </tr>
+        </#list>
+    </table>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Birthdate</th>
+            <th>Number</th>
+            <th>Adress</th>
+        </tr>
+        <#list costomers as costomer>
+            <tr>
+                <th>${costomer.idcostomer}</th>
+                <th>${costomer.birthdate}</th>
+                <th>${costomer.number}</th>
+                <th>${costomer.adress}</th>
             </tr>
         </#list>
     </table>

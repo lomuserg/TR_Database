@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import ru.podol.tr_database.models.Costomer;
 import ru.podol.tr_database.models.Order;
 import ru.podol.tr_database.models.Product;
 import ru.podol.tr_database.models.User;
+import ru.podol.tr_database.repozitories.CostomerRepozitory;
 import ru.podol.tr_database.repozitories.OrdersRepozitory;
 import ru.podol.tr_database.repozitories.UsersRepozitory;
 import ru.podol.tr_database.repozitories.ProductRepozitory;
@@ -22,6 +24,8 @@ public class UsersController {
     private ProductRepozitory productsRepozitory;
     @Autowired
     private OrdersRepozitory ordersRepozitory;
+    @Autowired
+    private CostomerRepozitory costomerRepozitory;
     @GetMapping("/users")
     public String getUsersPage(Model model){
         List<User> users = usersRepozitory.findAll();
@@ -30,6 +34,8 @@ public class UsersController {
         model.addAttribute("products",products);
         List<Order> orders = ordersRepozitory.findAll();
         model.addAttribute("orders",orders);
+        List<Costomer> costomers = costomerRepozitory.findAll();
+        model.addAttribute("costomers",costomers);
         return "users_page";
     }
 
