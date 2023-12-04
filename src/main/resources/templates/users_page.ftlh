@@ -25,6 +25,24 @@
             </tr>
         </#list>
     </table>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Size</th>
+        </tr>
+        <#list products as product>
+            <tr>
+                <th>${product.idproduct}</th>
+                <th>${product.category}</th>
+                <th>${product.price}</th>
+                <th>${product.size}</th>
+            </tr>
+        </#list>
+    </table>
+
 </div>
 </body>
 </html>
